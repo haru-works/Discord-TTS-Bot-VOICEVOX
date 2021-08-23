@@ -45,7 +45,7 @@ VOICEVOX_ENGINE=http://localhost:50021
 
 VOICEVOXのフォルダ内のVOICEVOX.exeを起動してください。
 <br>
-GPU搭載PCの人は、起動モード「GPU」で起動した方が読み上げレスポンスが早です。
+GPU搭載PCの人は、起動モード「GPU」で起動した方が読み上げレスポンスが早いです。
 
 ### BOTの起動
 
@@ -65,4 +65,11 @@ node bot.js
 | !readoff            | BOTの読み上げをOFFにします。 ※他の読み上げBOTが入っている時に、読み上げが被らないようにする時などに利用|
 | !readon             | BOTの読み上げをONにします。  ※読み上げを再開したい時に利用                                    　　 |
 | !vvvoice            | BOTの声を変更します。「!vvvoice 0」で四国めたんに変更。「!vvvoice 1」でずんだもんに変更。   　　　　 |
+
+
+
+### BOTデモ
+
+https://user-images.githubusercontent.com/89264182/130497067-244c1df6-fd03-45d0-876f-a9ea14e78aaf.mp4
+
 
