@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "@discordjs/opus": "^0.5.3",
+    "axios": "^0.21.1",
+    "config": "^3.3.6",
+    "config-reloadable": "^1.0.9",
+    "discord.js": "^12.5.3",
+    "dotenv": "^10.0.0",
+    "ffmpeg": "^0.0.4",
+    "ffmpeg-static": "^4.4.0",
+    "fs": "^0.0.1-security",
+    "http-node": "^1.2.0",
+    "memory-streams": "^0.1.3",
+    "opusscript": "^0.0.8"
+  }
+}
