@@ -192,7 +192,7 @@ function playAudioVV() {
     // チェンネルチェック
     //--------------------------------------------------------------
     if (message.channel.id !== ChannelId) { 
-      //チャンネル名が設定したチャンネル以外は処理しない
+      //設定したチャンネルID以外は処理しない
       console.log("チャンネルIDが異なるので以降の読み上げ処理はしません");
       return; 
     }
@@ -208,8 +208,8 @@ function playAudioVV() {
     //--------------------------------------------------------------
     // 起動コマンド
     //--------------------------------------------------------------
-    const [commandViva, ...argsViva] = message.content.split(' ')
-    if (commandViva === `${prefix}vvjoin`) {
+    const [commandJoin, ...argsJoin] = message.content.split(' ')
+    if (commandJoin === `${prefix}vvjoin`) {
       //デバック
       console.log('ユーザーID message.author.id ' + message.author.id );
       console.log('BOT ID discordClient.user.id ' + discordClient.user.id);
@@ -335,7 +335,7 @@ function playAudioVV() {
       if(Number(VoicevvMsg[0]) > 2 || Number(VoicevvMsg[0]) < 0){
         message.guild.channels.cache.get(ChannelId).send("声の設定は0～1の間で設定してね。");
         console.log(VoicevvMsg[0]);
-        console.log('voicevv設定コマンドが不正(設定範囲外)');
+        console.log('vvvoice設定コマンドが不正(設定範囲外)');
         return;
       }
       //ボイス設定
@@ -343,7 +343,7 @@ function playAudioVV() {
       //ボイス設定チェック
       if(userVoiceVOICEVOX[message.author.id] === undefined){
         message.guild.channels.cache.get(ChannelId).send("声の設定は0～1の間で設定してね。");
-        console.log('voicevv設定コマンドが不正(不正な値)');
+        console.log('vvvoice設定コマンドが不正(不正な値)');
         return;
       }
       //voice変更メッセージ送信   
@@ -365,13 +365,12 @@ function playAudioVV() {
     const text = message.content
                         .replace(/https?:\/\/\S+/g, '')  // URLを除去
                         .replace(/<a?:.*?:\d+>/g, '')    // カスタム絵文字を除去
-                        .replace( /[~!"#\$%&'\(\)\*\+,\-\.\/:;<=>\?@\[\\\]\^_`\{\|\}]/g,'')
+                        .replace( /[~!"#\$%&'\(\)\*\+,\-\.\/:;<=>\?@\[\\\]\^_`\{\|\}]/g,'') //記号を除去
                         .replace('vvjoin','')
                         .replace('vvbye','')
                         .replace('vvvoice','')
                         .replace('readon','')
-                        .replace('readoff','')
-                        .replace(/<a?:.*?:\d+>/g, '') ;  //記号を除去
+                        .replace('readoff',''); 
     // テキストが空なら読み上げしない 
     if(!text) { return; } 
     //メッセージのボイスチャンネルがあったら読み上げする
