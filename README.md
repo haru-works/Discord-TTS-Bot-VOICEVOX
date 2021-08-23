@@ -39,7 +39,8 @@ PREFIX=!
 DISCORD_BOT_TOKEN=ここにBOTトークンを記入
 VOICE_TEXT_CHANNEL_ID=ここに読み上げしたいテキストチャンネルのIDを記入
 VOICEVOX_ENGINE=http://localhost:50021
-```  
+``` 
+※VOICEVOX_ENGINEはいじらないで下さい。
 
 ### VOICEVOXの起動
 
