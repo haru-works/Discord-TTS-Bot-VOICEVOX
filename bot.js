@@ -241,8 +241,8 @@ function playAudioVV() {
                                                             `●VC退出　${prefix}vvbye\n` +
                                                             `●読み上げOFF　${prefix}readoff\n` +
                                                             `●読み上げON　${prefix}readon\n` +
-                                                            `●VOICEVOXの声の変更　${prefix}voicevv [番号]\n ` +
-                                                            `　例：ずんだもんに変更する場合「 ${prefix}voicevv 1 」\n` + 
+                                                            `●VOICEVOXの声の変更　${prefix}vvvoice [番号]\n ` +
+                                                            `　例：ずんだもんに変更する場合「 ${prefix}vvvoice 1 」\n` + 
                                                             `●声リスト\n` +
                                                             `　0:四国めたん\n` +
                                                             `　1:ずんだもん\n` +
